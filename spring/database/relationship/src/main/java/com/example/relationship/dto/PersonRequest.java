@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Builder
 @Data
 @AllArgsConstructor
@@ -13,6 +15,7 @@ public class PersonRequest {
 
     private String name;
     private Detail detail;
+    private List<Car> cars;
 
     @Builder
     @Data
@@ -22,5 +25,15 @@ public class PersonRequest {
 
         private String series;
         private String number;
+    }
+
+    @Builder
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class Car {
+
+        private String brand;
+        private String model;
     }
 }
